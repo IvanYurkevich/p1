@@ -1,0 +1,131 @@
+/* // Animated lines!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+li:before {
+    content: ' ';
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.6) ;
+    height: 3px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  
+    transform: scaleX(0);
+     transition: all 0.2s;
+}
+li:after {
+    content: ' ';
+    position: absolute;
+   background-color: rgba(0, 0, 0, 0.6);
+    height: 3px;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    transform: scaleX(0);
+   transition: all 0.2s;
+
+}
+
+
+/* li:hover:before{
+   animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: black;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+    }
+    50%{
+        width: 100%;
+        height: 0;
+        border-top-color: black;
+        border-left-color: transparent;
+        border-right-color: black;
+        border-bottom-color: transparent;
+    }
+    100%{
+        width: 100%;
+        height: 100% ;
+        border-top-color: black;
+        border-left-color: transparent;
+        border-right-color: black;
+        border-bottom-color: transparent;
+    }
+}
+
+li:hover:after{
+    animation: animate2 0.3s linear forwards;
+    animation-delay: 0.3s;
+ }
+ @keyframes animate2 {
+     0% {
+         width: 0%;
+         height: 0%;
+         border-top-color: transparent;
+         border-left-color: transparent;
+         border-right-color: transparent;
+         border-bottom-color: black;
+     }
+     50%{
+         width: 0;
+         height: 100%;
+         border-top-color: transparent;
+         border-left-color: transparent;
+         border-right-color: transparent;
+         border-bottom-color: black;
+     }
+     100%{
+         width: 100%;
+         height: 100%;
+         border-top-color: transparent;
+         border-left-color: black;
+         border-right-color: transparent;
+         border-bottom-color: black;
+     }
+ } */
+li:hover::before{
+    transform: scaleX(1);
+ }
+ li:hover::after{
+     transform: scaleX(1);
+ }
+/* // Animated lines!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.ml14 {
+    font-weight: 400;
+    font-size: 4em;
+  }
+  
+  .ml14 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml14 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color:black;
+    transform-origin: 100% 100%;
+    bottom: 0;
+  }
+  
+  .ml14 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  .ml14 {
+      position: absolute;
+      z-index: 99;
+      left: 40%;
+      top: 80%;
+      transform: translateX(-50%);
+  }

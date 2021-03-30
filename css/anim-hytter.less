@@ -1,0 +1,82 @@
+.item-hytte img {
+        transition: 1s;
+       
+}
+.item-hytte {
+    position: relative;
+
+    h1 {
+        position: absolute;
+        top:5%;
+        width: 100%;
+        text-align: center;
+        transform: scale(0);
+        transition: 1s;
+    }
+}
+.innertext {
+    font-weight: 600;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 1.4px;
+    font-size: 15px;
+    transform: scale(2);
+    transition: 1s;
+    opacity: 0;
+}
+    
+
+
+
+.item-hytte::before{
+    content: ' ';
+    position: absolute;
+    background: silver;
+    border: 2px solid gray;
+    width: 350px;
+    height: 350px;
+    top:0;
+    left:120%;
+    transform: rotate(45deg);
+    transition: 1s;
+}
+.item-hytte::after{
+    content: ' ';
+    position: absolute;
+    background: silver;
+    border: 2px solid gray;
+    width: 350px;
+    height: 350px;
+    top:0;
+    right:120%;
+    transform: rotate(45deg);
+    transition: 1s;
+}
+
+
+.item-hytte:hover .image-hytte {
+    transform:  scale(1.2);
+    filter: blur(0.5px);
+    opacity: 0.6;
+}
+.item-hytte:hover.item-hytte::before {
+    left: 20%;
+    opacity: 0.3;
+    
+}
+.item-hytte:hover.item-hytte::after {
+    right: 20%;
+    opacity: 0.3;
+}
+
+.item-hytte:hover h1 {
+    transform: scale(1);
+    z-index: 99;
+}
+.item-hytte:hover .innertext {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 99;
+}
